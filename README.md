@@ -10,13 +10,12 @@ It is a time of developers complain about performance. Rebel developers, strikin
 # Requirements
 
 - JDK 14 
-- [BlockHound](https://github.com/reactor/BlockHound)
 
-# Steps
+# Projects
 
 ## 1) Spring MVC Rest API and Spring Data to connect to the database
 
-At the repository you will find an Spring-MVC project using Springboot to launch our application as a fat or uber jar.
+At the repository you will find an Spring-MVC project using Springboot to launch our application as a fat or uber jar; go to the folder customers-api-traditional
 
 ### Compile
 
@@ -31,15 +30,46 @@ gradle bootRun
 To run the application just go to the build/lib folder and execute on the console:
 
 ``
-java -jar monolith-migrate-to-reactive-modules-0.0.1-SNAPSHOT.jar
+java -jar customers-api-traditional-0.0.1-SNAPSHOT.jar
 ``
-
-## 3) Reactive API and Blocked JDBC Connection
-
-At the reactive-jbdc-blocked branch the application is running with Webflux over Netty but producing blocking threads to connect via JDBC to the Database. 
 
 ## 4) Reactive API and non blocking R2DBC Connection to the database
 
-At the Master branch the application is running with Webflux over Netty with R2DBC conection to a H2SQL database.
+An application is running with Webflux over Netty with R2DBC conection to a H2SQL database; go to the folder customers-api-reactive
 
+### Compile
+
+To compile you need gradle instaleed; and then, run on the console:
+
+``
+gradle bootRun
+``
+
+### Run
+
+To run the application just go to the build/lib folder and execute on the console:
+
+``
+java -jar customers-api-reactive-0.0.1-SNAPSHOT.jar
+``
+
+## 4) Reactive API and non blocking R2DBC Connection to the database
+
+An application with security using OAUTH2 and AUTH0 as autorization server; running with Webflux over Netty with R2DBC conection to a H2SQL database; go to the folder customers-api-reactive-full
+
+### Compile
+
+To compile you need gradle instaleed; and then, run on the console:
+
+``
+gradle bootRun
+``
+
+### Run
+
+To run the application just go to the build/lib folder and execute on the console:
+
+``
+java -jar customers-api-reactive-full-0.0.1-SNAPSHOT.jar
+``
 
