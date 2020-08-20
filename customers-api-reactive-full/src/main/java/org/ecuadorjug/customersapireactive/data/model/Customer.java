@@ -5,17 +5,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
+import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.ArrayList;
-import java.util.List;
-
+@Table("customer")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Team {
+public class Customer {
     @Id
-    private String id;
+    private Integer id;
+    @Column
     private String name;
-    private List<Customer> customers = new ArrayList<>();
+    @Column
+    private Integer score;
 }
