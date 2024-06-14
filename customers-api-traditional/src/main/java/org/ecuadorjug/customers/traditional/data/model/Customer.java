@@ -2,7 +2,7 @@ package org.ecuadorjug.customers.traditional.data.model;
 
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity(name = "customer")
 @Data
